@@ -1,0 +1,31 @@
+{
+  "name": "circle-ci-test",
+  "version": "4.1.42",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release:production": "standard-version -t stable-",
+    "release:production:major": "standard-version --release-as major -t stable-",
+    "release:production:minor": "standard-version --release-as minor -t stable-",
+    "release:production:patch": "standard-version --release-as patch -t stable-",
+    "release:test": "standard-version -t unstable-",
+    "release:test:major": "standard-version --release-as major -t unstable-",
+    "release:test:minor": "standard-version --release-as minor -t unstable-",
+    "release:test:patch": "standard-version --release-as patch -t unstable-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/gofield/beta-project/circle-ci-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/gofield/beta-project/circle-ci-test/issues"
+  },
+  "homepage": "https://gitlab.com/gofield/beta-project/circle-ci-test#readme",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}

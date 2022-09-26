@@ -1,0 +1,22 @@
+version: 2.1
+executors:
+  executor-linux-small:
+    docker:
+      - image: cimg/base:2020.01
+    resource_class: small
+
+jobs:
+  build:
+    executor: executor-linux-small
+    steps:
+      - run: echo "hello world"
+
+workflows:
+  workflow1:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /^stable.*$/
+            branches:
+              ignore: /^.*$/
